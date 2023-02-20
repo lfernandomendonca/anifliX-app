@@ -30,4 +30,4 @@ const Anime = () => {
 
     )
 } 
-export default Anime
+// export default Anime
