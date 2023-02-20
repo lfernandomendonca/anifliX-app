@@ -1,0 +1,92 @@
+.nav {
+  position:absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-top: 1rem;
+  z-index: 999;
+}
+.navBox {
+  height: 4.4rem;
+  background-color: rgba(5, 8, 1, 0.2);
+  border-radius: 40rem;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchText {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  font-size: 1.6rem;
+  transition: 0.5s;
+  line-height: 4rem;
+  width: 0px;
+}
+.searchBtn {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  background-color: #050801;
+  color: #03e9f4;
+  font-weight: bold;
+  border: none;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.navBox:hover .searchText {
+  width: 20rem;
+  padding: 0 6px;
+}
+.navBox:hover .searchBtn {
+  visibility: initial;
+  font-size: 0.8rem;
+  transition: 0.5s;
+  width: 4.4rem;
+  height: 4.4rem;
+  margin-right: 2rem;
+  border-radius: 2rem;
+  background: transparent;
+}
+.searchBtn:hover {
+  opacity: 0.5;
+}
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  text-decoration-style: none;
+}
+.navLink {
+  position: relative;
+}
+.navLink:hover {
+  cursor: pointer;
+  color:yellowgreen;
+  transition: 1.0s;
+}
+.navLink::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: yellowgreen;
+  height: 1px;
+}
+.navLink:hover:after {
+  width: 100%;
+  transition: 0.5s;
+}
